@@ -1,0 +1,19 @@
+package database;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+public class Database{
+	
+	static SQLiteDatabase myDb;
+	Context con;
+	
+	public Database(Context context){
+		this.con = context;
+	}
+	
+	public static void createDatabase(){
+		myDb = con.openOrCreateDatabase("utask.db", Context.MODE_PRIVATE, null);
+	}
+	
+}

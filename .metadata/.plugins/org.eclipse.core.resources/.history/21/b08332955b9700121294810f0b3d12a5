@@ -1,0 +1,16 @@
+package database;
+
+import android.app.Activity;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+public class Database{
+	
+	static SQLiteDatabase myDb;
+	
+	public static void createDatabase(){
+		Database da = new Database();
+		myDb = openOrCreateDatabase("utask.db", Context.MODE_PRIVATE, null);
+	}
+	
+}

@@ -1,0 +1,15 @@
+package database;
+
+import android.database.* ;
+import android.database.sqlite.*;
+import android.content.Context;
+
+public class Database extends SQLiteDatabase {
+	
+	Database() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	SQLiteDatabase myDb = openOrCreateDatabase("utask.db", null,Context.MODE_PRIVATE);  
+}

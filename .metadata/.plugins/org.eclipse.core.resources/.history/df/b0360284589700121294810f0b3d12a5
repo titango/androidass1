@@ -1,0 +1,14 @@
+package database;
+
+import android.app.Activity;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import ass1.assignment1.R;
+
+public class Database extends Activity{
+	
+	SQLiteDatabase myDb;
+	
+	
+}

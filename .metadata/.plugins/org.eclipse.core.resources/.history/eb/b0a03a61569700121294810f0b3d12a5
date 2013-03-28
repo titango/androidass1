@@ -1,0 +1,10 @@
+package database;
+
+import android.database.* ;
+import android.database.sqlite.*;
+import android.content.Context;
+
+public class Database {
+	
+	SQLiteDatabase myDb = openOrCreateDatabase("example.db", Context.MODE_PRIVATE,null);  
+}
