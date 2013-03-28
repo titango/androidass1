@@ -11,6 +11,7 @@ public class Database {
 
 	private static final String TASK_TABLE = "taskTable";
 	private static final String TASK_ID = "taskID";
+	private static final String TITLE = "title";
 	private static final String GROUP_NAME = "groupName";
 	private static final String PRIORITY = "priority";
 	private static final String COLLABORATORS = "collaborators";
@@ -27,10 +28,15 @@ public class Database {
 	public static void createDatabase() {
 		myDb = con.openOrCreateDatabase("utask.db", Context.MODE_PRIVATE, null);
 
-		String sqlDataTask = "create table if not exists " + TASK_TABLE + " ("
-				+ TASK_ID + " integer primary key autoincrement, " + GROUP_NAME
-				+ " text, " + PRIORITY + " text, " + COLLABORATORS + " text , "
-				+ DUEDATE + " text, " + NOTE + " text);";
+		String sqlDataTask = "create table if not exists " 
+				+ TASK_TABLE + " ("
+				+ TASK_ID + " integer primary key autoincrement, " 
+				+ TITLE + " text, "
+				+ GROUP_NAME + " text, " 
+				+ PRIORITY + " text, " 
+				+ COLLABORATORS + " text , "
+				+ DUEDATE + " text, " 
+				+ NOTE + " text);";
 
 		String sqlDataGroupTask = "create table if not exists "
 				+ TASK_GROUP_TABLE + " (" + GROUP_ID
@@ -50,21 +56,21 @@ public class Database {
 		newValues.put(COLLABORATORS, colla);
 		newValues.put(DUEDATE, dueDate);
 		newValues.put(NOTE, note);
-		myDb.insert("taskTable", null, newValues);
+		myDb.insert(TASK_TABLE, null, newValues);
 	}
 
 	public static void addToGroupTaskTable(String groupName) {
 		ContentValues newValues = new ContentValues();
 		newValues.put(GROUP_NAME, groupName);
-		myDb.insert("taskGroupTable", null, newValues);
+		myDb.insert(TASK_GROUP_TABLE, null, newValues);
 	}
 
-	public static void deleteFromTaskTable() {
-		// myDb.delete("taskTable", "taskID = 2", null);
+	public static void deleteFromTaskTable(int id) {
+		myDb.delete(TASK_TABLE, TASK_ID + " = " + id, null);
 	}
 
-	public static void deleteFormGroupTaskTable() {
-
+	public static void deleteFromGroupTaskTable(int id) {
+		myDb.delete(TASK_GROUP_TABLE, GROUP_ID + " = " + id, null);
 	}
 
 }

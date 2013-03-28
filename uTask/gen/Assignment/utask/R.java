@@ -13,6 +13,8 @@ public final class R {
     public static final class color {
         public static final int black=0x7f040001;
         public static final int darkblue=0x7f040002;
+        public static final int lightyellow=0x7f040003;
+        public static final int superlightyellow=0x7f040004;
         public static final int white=0x7f040000;
     }
     public static final class dimen {
@@ -30,7 +32,11 @@ public final class R {
         public static final int top_panel_gradient_selector=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090001;
+        public static final int action_settings=0x7f090005;
+        public static final int bottom_panel=0x7f090004;
+        public static final int imageButton1=0x7f090003;
+        public static final int spinner1=0x7f090002;
+        public static final int spinner2=0x7f090001;
         public static final int top_panel=0x7f090000;
     }
     public static final class layout {
@@ -41,6 +47,7 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
+        public static final int addingButton=0x7f060003;
         public static final int app_name=0x7f060000;
         public static final int hello_world=0x7f060002;
     }
