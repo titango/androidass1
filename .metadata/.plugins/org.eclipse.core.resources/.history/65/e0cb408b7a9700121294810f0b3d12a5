@@ -1,0 +1,57 @@
+package database;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+public class Database {
+
+	private static SQLiteDatabase myDb;
+	private static Context con;
+
+	private static final String TASK_TABLE = "taskTable";
+	private static final String TASK_GROUP_TABLE = "taskGroupTable";
+
+	public Database(Context context) {
+		con = context;
+	}
+
+	public static void createDatabase() {
+		myDb = con.openOrCreateDatabase("utask.db", Context.MODE_PRIVATE, null);
+
+		String sqlDataTask = "create table if not exists "
+				+ TASK_TABLE
+				+ " (taskID integer primary key autoincrement, "
+				+ "groupID integer, priority varchar(6), groups text not null, collaborators text not null, dueDate text not null, "
+				+ "note text not null);";
+		myDb.execSQL(sqlDataTask);
+		
+		ContentValues newValues = new ContentValues();
+		newValues.put("note", "High");
+		myDb.insert("taskTable", null, newValues);
+
+		String sqlDataGroupTask = "create table if not exists "
+				+ TASK_GROUP_TABLE
+				+ " (groupID integer primary key autoincrement, "
+				+ "groups text not null)";
+
+		myDb.execSQL(sqlDataGroupTask);
+	}
+
+	public static void addToTaskTable() {
+
+	}
+
+	public static void addToGroupTaskTable() {
+
+	}
+
+	public static void deleteFromTaskTable() {
+
+	}
+
+	public static void deleteFormGroupTaskTable() {
+
+	}
+
+}
