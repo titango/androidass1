@@ -1,0 +1,7 @@
+package database;
+
+public class Group {
+
+	//Properties
+	ArrayList<String> grouplist = new ArrayList<String>();
+}

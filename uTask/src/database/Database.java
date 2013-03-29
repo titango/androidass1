@@ -27,7 +27,7 @@ public class Database {
 
 	public static void createDatabase() {
 		myDb = con.openOrCreateDatabase("utask.db", Context.MODE_PRIVATE, null);
-
+		
 		String sqlDataTask = "create table if not exists " 
 				+ TASK_TABLE + " ("
 				+ TASK_ID + " integer primary key autoincrement, " 
