@@ -39,7 +39,7 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:contentDescription="@string/addingGroupTaskButton"
-            android:src="@android:drawable/ic_menu_add" />
+            android:src="@android:drawable/ic_input_add" />
         
         <ImageButton
             android:id="@+id/addGroupTaskButton"

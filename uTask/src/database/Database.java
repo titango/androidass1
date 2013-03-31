@@ -38,27 +38,30 @@ public class Database {
 		myDb = con.openOrCreateDatabase("utask.db", Context.MODE_PRIVATE, null);
 
 		String sqlDataTask = "create table if not exists " + TASK_TABLE + " ("
-				+ TASK_ID + " integer primary key autoincrement, " + TITLE
+				+ TASK_ID + " text primary key, " + TITLE
 				+ " text, " + GROUP_NAME + " text, " + PRIORITY + " text, "
 				+ COLLABORATORS + " text , " + DUEDATE + " text, " + NOTE
 				+ " text);";
 
 		String sqlDataGroupTask = "create table if not exists "
 				+ TASK_GROUP_TABLE + " (" + GROUP_ID
-				+ " integer primary key autoincrement, " + GROUP_NAME
+				+ " text primary key, " + GROUP_NAME
 				+ " text not null);";
 
 		myDb.execSQL(sqlDataTask);
 		myDb.execSQL(sqlDataGroupTask);
-
 	}
 
 	//Add values to Table "taskTable" 
 	public static void addToTaskTable(String groupName, String priority,
 			String dueDate, String note, ArrayList<String> colla) {
+		
+		//Add to SQLiteDatabase
 		String tempColla = "";
-
+		String newID = Task.autoTaskGenerateId();
+		
 		ContentValues newValues = new ContentValues();
+		newValues.put(TASK_ID, newID);
 		newValues.put(GROUP_NAME, groupName);
 		newValues.put(PRIORITY, priority);
 		newValues.put(DUEDATE, dueDate);
@@ -74,13 +77,33 @@ public class Database {
 		
 		newValues.put(COLLABORATORS, tempColla);
 		myDb.insert(TASK_TABLE, null, newValues);
+		
+		//Add to Data class (model)
+		Task newTask = new Task();
+		newTask.setId(newID);
+		newTask.setGroupName(groupName);
+		newTask.setPriority(priority);
+		newTask.setDueDate(dueDate);
+		newTask.setNote(note);
+		newTask.setCollaborators(colla);
+		Data.getTaskList().add(newTask);
 	}
 
-	//Add values to table "groupTaskTable"
+	//Add values to table "groupTaskTable" and Model
 	public static void addToGroupTaskTable(String groupName) {
 		ContentValues newValues = new ContentValues();
+		
+		//Add to SQLiteDatabase
+		String newID = GroupTask.autoGroupGenerateId();
+		newValues.put(GROUP_ID, newID);
 		newValues.put(GROUP_NAME, groupName);
 		myDb.insert(TASK_GROUP_TABLE, null, newValues);
+		
+		//Add to Data class (model)
+		GroupTask newGroup = new GroupTask();
+		newGroup.setId(newID);
+		newGroup.setGroupName(groupName);
+		Data.getGroupList().add(newGroup);
 	}
 
 	//Delete values from taskTable

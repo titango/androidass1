@@ -13,8 +13,11 @@ public final class R {
     public static final class color {
         public static final int black=0x7f040001;
         public static final int darkblue=0x7f040002;
+        public static final int darkorange=0x7f040007;
         public static final int lightblue=0x7f040003;
+        public static final int lightorange=0x7f040006;
         public static final int lightyellow=0x7f040004;
+        public static final int lowlightgreen=0x7f040008;
         public static final int superlightyellow=0x7f040005;
         public static final int white=0x7f040000;
     }
@@ -33,15 +36,32 @@ public final class R {
         public static final int top_panel_gradient_selector=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000a;
+        public static final int action_settings=0x7f09001b;
         public static final int addGroupTaskButton=0x7f090004;
         public static final int addTaskButton=0x7f090003;
         public static final int bottom_panel=0x7f090005;
-        public static final int bottom_panel_add_edit=0x7f090007;
+        public static final int bottom_panel_add_edit=0x7f090009;
+        public static final int chooseContact_right_bottom_panel_add_edit=0x7f090017;
+        public static final int colla_left_bottom_panel_add_edit=0x7f09000f;
+        public static final int contactbutton_right_bottom_panel_add_edit=0x7f090016;
+        public static final int date_right_bottom_panel_add_edit=0x7f090014;
+        public static final int deleteTaskButton_add_edit=0x7f090008;
+        public static final int duedate_left_bottom_panel_add_edit=0x7f09000d;
         public static final int groupSpin=0x7f090001;
+        public static final int group_left_bottom_panel_add_edit=0x7f09000e;
+        public static final int group_right_bottom_panel_add_edit=0x7f090015;
+        public static final int left_bottom_panel_add_edit=0x7f09000a;
+        public static final int note_left_bottom_panel_add_edit=0x7f090010;
+        public static final int note_right_bottom_panel_add_edit=0x7f090018;
+        public static final int priority_left_bottom_panel_add_edit=0x7f09000c;
+        public static final int priority_right_bottom_panel_add_edit=0x7f090013;
+        public static final int right_bottom_panel_add_edit=0x7f090011;
+        public static final int saveTaskButton_add_edit=0x7f090007;
         public static final int sortSpin=0x7f090002;
-        public static final int task_list_item_date=0x7f090008;
-        public static final int task_list_item_title=0x7f090009;
+        public static final int task_list_item_date=0x7f090019;
+        public static final int task_list_item_title=0x7f09001a;
+        public static final int title_left_bottom_panel_add_edit=0x7f09000b;
+        public static final int title_right_bottom_panel_add_edit=0x7f090012;
         public static final int top_panel=0x7f090000;
         public static final int top_panel_add_edit=0x7f090006;
     }
@@ -59,7 +79,14 @@ public final class R {
         public static final int addingGroupTaskButton=0x7f060004;
         public static final int addingTaskButton=0x7f060003;
         public static final int app_name=0x7f060000;
+        public static final int chooseContact=0x7f06000b;
+        public static final int collaborator=0x7f060009;
+        public static final int duedate=0x7f060007;
+        public static final int group=0x7f060008;
         public static final int hello_world=0x7f060002;
+        public static final int note=0x7f06000a;
+        public static final int priority=0x7f060005;
+        public static final int title=0x7f060006;
     }
     public static final class style {
         /** 
