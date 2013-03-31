@@ -13,8 +13,9 @@ public final class R {
     public static final class color {
         public static final int black=0x7f040001;
         public static final int darkblue=0x7f040002;
-        public static final int lightyellow=0x7f040003;
-        public static final int superlightyellow=0x7f040004;
+        public static final int lightblue=0x7f040003;
+        public static final int lightyellow=0x7f040004;
+        public static final int superlightyellow=0x7f040005;
         public static final int white=0x7f040000;
     }
     public static final class dimen {
@@ -32,23 +33,31 @@ public final class R {
         public static final int top_panel_gradient_selector=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090005;
-        public static final int bottom_panel=0x7f090004;
+        public static final int action_settings=0x7f09000a;
+        public static final int addGroupTaskButton=0x7f090004;
+        public static final int addTaskButton=0x7f090003;
+        public static final int bottom_panel=0x7f090005;
+        public static final int bottom_panel_add_edit=0x7f090007;
         public static final int groupSpin=0x7f090001;
-        public static final int imageButton1=0x7f090003;
         public static final int sortSpin=0x7f090002;
+        public static final int task_list_item_date=0x7f090008;
+        public static final int task_list_item_title=0x7f090009;
         public static final int top_panel=0x7f090000;
+        public static final int top_panel_add_edit=0x7f090006;
     }
     public static final class layout {
         public static final int activity_main_screen=0x7f030000;
-        public static final int task_list_item=0x7f030001;
+        public static final int add_edit_task=0x7f030001;
+        public static final int myspinner_text_view=0x7f030002;
+        public static final int task_list_item=0x7f030003;
     }
     public static final class menu {
         public static final int main_screen=0x7f080000;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
-        public static final int addingButton=0x7f060003;
+        public static final int addingGroupTaskButton=0x7f060004;
+        public static final int addingTaskButton=0x7f060003;
         public static final int app_name=0x7f060000;
         public static final int hello_world=0x7f060002;
     }
@@ -79,5 +88,8 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        /**  Inherits the Holo theme with no action bar; no other styles needed. 
+         */
+        public static final int NoActionBar=0x7f070002;
     }
 }

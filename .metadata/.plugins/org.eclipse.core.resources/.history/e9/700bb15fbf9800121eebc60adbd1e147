@@ -1,0 +1,154 @@
+package database;
+
+import java.util.ArrayList;
+
+import model.GroupTask;
+import model.Task;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
+public class Database {
+
+	//Properties
+	private static SQLiteDatabase myDb;
+	private static Context con;
+
+	private static final String TASK_TABLE = "taskTable";
+	private static final String TASK_ID = "taskID";
+	private static final String TITLE = "title";
+	private static final String GROUP_NAME = "groupName";
+	private static final String PRIORITY = "priority";
+	private static final String COLLABORATORS = "collaborators";
+	private static final String DUEDATE = "dueDate";
+	private static final String NOTE = "note";
+
+	private static final String TASK_GROUP_TABLE = "taskGroupTable";
+	private static final String GROUP_ID = "groupID";
+
+	//Constructor passing context to use functions
+	public Database(Context context) {
+		con = context;
+	}
+
+	//Create SQlite Database
+	public static void createDatabase() {
+		myDb = con.openOrCreateDatabase("utask.db", Context.MODE_PRIVATE, null);
+
+		String sqlDataTask = "create table if not exists " + TASK_TABLE + " ("
+				+ TASK_ID + " integer primary key autoincrement, " + TITLE
+				+ " text, " + GROUP_NAME + " text, " + PRIORITY + " text, "
+				+ COLLABORATORS + " text , " + DUEDATE + " text, " + NOTE
+				+ " text);";
+
+		String sqlDataGroupTask = "create table if not exists "
+				+ TASK_GROUP_TABLE + " (" + GROUP_ID
+				+ " integer primary key autoincrement, " + GROUP_NAME
+				+ " text not null);";
+
+		myDb.execSQL(sqlDataTask);
+		myDb.execSQL(sqlDataGroupTask);
+
+	}
+
+	//Add values to Table "taskTable" 
+	public static void addToTaskTable(String groupName, String priority,
+			String dueDate, String note, ArrayList<String> colla) {
+		String tempColla = "";
+
+		ContentValues newValues = new ContentValues();
+		newValues.put(GROUP_NAME, groupName);
+		newValues.put(PRIORITY, priority);
+		newValues.put(DUEDATE, dueDate);
+		newValues.put(NOTE, note);
+		
+		for(int i = 0; i < colla.size();i++){
+			if(i == 0){
+				tempColla = tempColla + colla.get(i); 
+			}else{
+				tempColla = tempColla + "," + colla.get(i);
+			}
+		}
+		
+		newValues.put(COLLABORATORS, tempColla);
+		myDb.insert(TASK_TABLE, null, newValues);
+	}
+
+	//Add values to table "groupTaskTable"
+	public static void addToGroupTaskTable(String groupName) {
+		ContentValues newValues = new ContentValues();
+		newValues.put(GROUP_NAME, groupName);
+		myDb.insert(TASK_GROUP_TABLE, null, newValues);
+	}
+
+	//Delete values from taskTable
+	public static void deleteFromTaskTable(int id) {
+		myDb.delete(TASK_TABLE, TASK_ID + " = " + id, null);
+	}
+
+	//Delete values from groupTaskTable
+	public static void deleteFromGroupTaskTable(int id) {
+		myDb.delete(TASK_GROUP_TABLE, GROUP_ID + " = " + id, null);
+	}
+
+	//Load data into Data model class
+	public static void loadToData() {
+		//Create cursor for querying data from Sqlite database
+		Cursor curTask = myDb.query(TASK_TABLE, new String[] { TASK_ID, TITLE,
+				GROUP_NAME, PRIORITY, COLLABORATORS, DUEDATE, NOTE }, null,
+				null, null, null, TASK_ID);
+		
+		Cursor curGroup = myDb.query(TASK_GROUP_TABLE, new String[] {GROUP_ID, GROUP_NAME}, null,
+				null, null, null, GROUP_ID);
+		
+		//Temp variables use to get values from Collaborators
+		String tempColla;
+		String[] splitColla;
+		ArrayList<String> collaList = new ArrayList<String>();
+
+		//Loop to add Task into Data
+		if (curTask.moveToFirst()) {
+			do {
+				Task tempTask = new Task();
+				tempTask.setId(curTask.getString(curTask
+						.getColumnIndexOrThrow(TASK_ID)));
+				tempTask.setTitle(curTask.getString(curTask
+						.getColumnIndexOrThrow(TITLE)));
+				tempTask.setGroupName(curTask.getString(curTask
+						.getColumnIndexOrThrow(GROUP_NAME)));
+				tempTask.setPriority(curTask.getString(curTask
+						.getColumnIndexOrThrow(PRIORITY)));
+				
+				tempColla = curTask.getString(curTask.getColumnIndexOrThrow(COLLABORATORS));
+				splitColla = tempColla.split(",");
+				for(int i = 0; i < splitColla.length; i++){
+					collaList.add(splitColla[i]);
+				}
+				tempTask.setCollaborators(collaList);
+				
+				tempTask.setDueDate(curTask.getString(curTask
+						.getColumnIndexOrThrow(DUEDATE)));
+				tempTask.setNote(curTask.getString(curTask
+						.getColumnIndexOrThrow(NOTE)));
+				
+			} while (curTask.moveToNext());
+		}
+		
+		if(curGroup.moveToFirst()){
+			do{
+				GroupTask tempGroup = new GroupTask();
+				tempGroup.setGroupName(curGroup.getString(curGroup.getColumnIndexOrThrow(GROUP_ID)));
+			}while(curGroup.moveToNext());
+		}
+		
+		if (curTask != null && curTask.isClosed()) {
+			curTask.close();
+        }
+		
+		if (curGroup != null && curGroup.isClosed()) {
+			curGroup.close();
+        }
+	}
+
+}

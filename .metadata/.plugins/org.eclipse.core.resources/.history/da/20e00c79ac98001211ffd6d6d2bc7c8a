@@ -1,0 +1,19 @@
+package model;
+
+import java.util.ArrayList;
+
+public class Data {
+
+	// Properties
+	public static ArrayList<Group> groupList = new ArrayList<Group>();
+	public static ArrayList<Group> taskList = new ArrayList<Group>();
+	
+	public static ArrayList<Group> getGrouplist() {
+		return groupList;
+	}
+
+	public static void setGrouplist(ArrayList<Group> grouplist) {
+		Data.groupList = grouplist;
+	}
+
+}

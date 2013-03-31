@@ -1,18 +1,28 @@
-package model;
+package Model;
 
 import java.util.ArrayList;
 
 public class Data {
 
 	// Properties
-	public static ArrayList<Group> grouplist = new ArrayList<Group>();
+	public static ArrayList<GroupTask> groupList = new ArrayList<GroupTask>();
+	public static ArrayList<Task> taskList = new ArrayList<Task>();
 
-	public static ArrayList<Group> getGrouplist() {
-		return grouplist;
+	public static ArrayList<GroupTask> getGroupList() {
+		return groupList;
 	}
 
-	public static void setGrouplist(ArrayList<Group> grouplist) {
-		Data.grouplist = grouplist;
+	public static void setGroupList(ArrayList<GroupTask> groupList) {
+		Data.groupList = groupList;
 	}
 
+	public static ArrayList<Task> getTaskList() {
+		return taskList;
+	}
+
+	public static void setTaskList(ArrayList<Task> taskList) {
+		Data.taskList = taskList;
+	}
+
+	
 }

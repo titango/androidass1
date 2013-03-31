@@ -5,3 +5,8 @@
 1364446548480	Rename package 'Assignment.utask'
 1364582847936	Move compilation units
 1364582869844	Rename package 'Model'
+1364589428354	Rename type 'MainScreen'
+1364589435084	Rename type 'TaskModify'
+1364595604197	Rename local variable 'current'
+1364595760965	Rename type 'Group'
+1364685516043	Rename field 'spinAdapt'

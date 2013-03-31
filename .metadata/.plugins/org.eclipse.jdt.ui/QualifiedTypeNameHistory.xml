@@ -5,4 +5,9 @@
 <fullyQualifiedTypeName name="database.Database"/>
 <fullyQualifiedTypeName name="android.content.ContextWrapper"/>
 <fullyQualifiedTypeName name="Assignment.utask.R.id"/>
+<fullyQualifiedTypeName name="android.provider.SyncStateContract.Columns"/>
+<fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.layout"/>
+<fullyQualifiedTypeName name="model.Data"/>
 </qualifiedTypeNameHistroy>
