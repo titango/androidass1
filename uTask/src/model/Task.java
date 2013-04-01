@@ -9,6 +9,7 @@ public class Task {
 	private String groupName = "";
 	private String priority = "";
 	private String dueDate = "";
+	private String status = "";
 	private String note = "";
 	private ArrayList<String> collaborators = new ArrayList<String>();
 
@@ -16,7 +17,7 @@ public class Task {
 	};
 
 	public Task(String id, String title, String groupName, String priority,
-			String dueDate, String note, ArrayList<String> collaborators) {
+			String dueDate, String status, String note, ArrayList<String> collaborators) {
 		this.id = id;
 		this.title = title;
 		this.groupName = groupName;
@@ -96,6 +97,14 @@ public class Task {
 
 	public void setCollaborators(ArrayList<String> collaborators) {
 		this.collaborators = collaborators;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 }

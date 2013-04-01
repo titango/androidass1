@@ -13,5 +13,6 @@
     <string name="collaborator">Collaborator:</string>
     <string name="note">Note:</string>
     <string name="chooseContact">Choose</string>
+    <string name="status">Completed</string>
 
 </resources>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;fiTitle&apos; in &apos;custom.MyTaskAdapter.getView(...)&apos; to &apos;fiDate&apos;&#x0D;&#x0A;- Original project: &apos;uTask&apos;&#x0D;&#x0A;- Original element: &apos;custom.MyTaskAdapter.getView(int, View, ViewGroup).fiTitle&apos;&#x0D;&#x0A;- Renamed element: &apos;fiTitle&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;fiTitle&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;custom{MyTaskAdapter.java[MyTaskAdapter~getView~I~QView;~QViewGroup;@fiTitle!1538!1601!1545!1551!QString;!0!false" name="fiDate" references="true" stamp="1364777060582" version="1.0"/>
+</session>

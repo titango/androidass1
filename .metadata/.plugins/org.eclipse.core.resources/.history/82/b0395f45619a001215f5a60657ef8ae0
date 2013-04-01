@@ -1,0 +1,21 @@
+package custom;
+
+import java.util.ArrayList;
+
+import Model.Task;
+import android.content.Context;
+import android.widget.ArrayAdapter;
+
+public class MyTaskAdapter extends ArrayAdapter<Task> {
+
+	private Context context;
+	private ArrayList<Task> tasks = new ArrayList<Task>();
+	
+	public MyTaskAdapter(Context context, int textViewResourceId,
+            ArrayList<Task> objects) {
+        super(context, textViewResourceId, objects);
+        this.context = context;
+        this.tasks = objects;
+    }
+
+}

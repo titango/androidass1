@@ -7,12 +7,14 @@ import Model.Data;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
+import custom.MyTaskAdapter;
 import database.Database;
 
 public class MainScreenView extends Activity {
@@ -24,12 +26,14 @@ public class MainScreenView extends Activity {
 	
 	// All input tools
 	Spinner groupSpin, sortSpin;
-	ListView listView;
+	ListView taskListView;
 	ImageButton taskBut, groupBut;
 
 	ArrayAdapter<String> spinGroupAdapt, sortAdapt;
+	MyTaskAdapter taskAdapt;
 	ArrayList<String> groupName = new ArrayList<String>();
 	ArrayList<String> sortData = new ArrayList<String>();
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +62,9 @@ public class MainScreenView extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
-		
+		Log.i("Return back to main", "Already returned");
+		spinGroupAdapt.notifyDataSetChanged();
+		taskAdapt.notifyDataSetChanged();
 	}
 	
 	// This will refresh the item once the group is added
@@ -79,13 +85,16 @@ public class MainScreenView extends Activity {
 		// Create 2 ImageButton
 		taskBut = (ImageButton) findViewById(R.id.addTaskButton);
 		groupBut = (ImageButton) findViewById(R.id.addGroupTaskButton);
+		
+		//Create listview
+		taskListView = (ListView) findViewById(R.id.showAllTask);
 
 		// Add the total group to the groupName arraylist and setAdapter
 		groupName = refreshGroupName();
 		spinGroupAdapt = new ArrayAdapter<String>(this,
 				R.layout.myspinner_text_view, groupName);
-		spinGroupAdapt
-				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinGroupAdapt.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinGroupAdapt.setNotifyOnChange(true);
 		groupSpin.setAdapter(spinGroupAdapt);
 
 		// Add the options of sorting to sortData and set Adapter
@@ -97,6 +106,11 @@ public class MainScreenView extends Activity {
 		sortAdapt
 				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		sortSpin.setAdapter(sortAdapt);
+		
+		//Use custom adapter and set ListView
+		taskAdapt = new MyTaskAdapter(getApplicationContext(), R.layout.task_list_item, Data.getTaskList());
+		taskAdapt.setNotifyOnChange(true);
+		taskListView.setAdapter(taskAdapt);
 	}
 	
 	private void allAction(){
@@ -114,6 +128,17 @@ public class MainScreenView extends Activity {
 				startActivityForResult(shootToAddEditTaskIntent, ADD_INTENT);
 			}
 		});
+		
+		groupBut.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent shootToGroupViewIntent = new Intent(MainScreenView.this, GroupView.class);
+				
+				
+			}
+		});
 	}
+	
 
 }

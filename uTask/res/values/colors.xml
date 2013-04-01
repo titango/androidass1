@@ -9,5 +9,8 @@
     <color name="lightorange">#FFCC33</color>
     <color name="darkorange">#FFBF00</color>
     <color name="lowlightgreen">#00FF99</color>
+    <color name="lightpurple">#9999FF</color>
+    <color name="bananagreen">#E6FF66</color>
+    <color name="lightgreen">#00FFAA</color>
     
 </resources>

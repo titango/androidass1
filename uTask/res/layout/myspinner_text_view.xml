@@ -5,4 +5,4 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:gravity="center" 
-    android:textColor="@color/lowlightgreen"/>
+    android:textColor="@color/lightorange"/>

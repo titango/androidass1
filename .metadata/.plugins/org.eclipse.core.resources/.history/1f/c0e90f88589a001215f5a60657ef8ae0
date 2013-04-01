@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">uTask</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="addingTaskButton">This is the button to add task</string>
+    <string name="addingGroupTaskButton">This is the button to add task group</string>
+    <string name="priority">Priority:</string>
+    <string name="title">Title:</string>
+    <string name="duedate">DueDate:</string>
+    <string name="group">Group:</string>
+    <string name="collaborator">Collaborator:</string>
+    <string name="note">Note:</string>
+    <string name="chooseContact">Choose</string>
+
+</resources>

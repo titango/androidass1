@@ -1,0 +1,15 @@
+package custom;
+
+import android.widget.ArrayAdapter;
+import Model.Task;
+
+public class MyTaskAdapter extends ArrayAdapter<Task> {
+
+	public MyTaskAdapter(Context context, int textViewResourceId,
+            List<Country> objects) {
+        super(context, textViewResourceId, objects);
+        this.context = context;
+        this.countries = objects;
+    }
+
+}

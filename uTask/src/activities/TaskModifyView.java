@@ -4,20 +4,26 @@ import java.util.ArrayList;
 
 import Assignment.utask.R;
 import Model.Data;
+import Model.Task;
+import database.Database;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.DatabaseErrorHandler;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import custom.MyEditText;
+
 
 public class TaskModifyView extends Activity {
 
@@ -30,6 +36,7 @@ public class TaskModifyView extends Activity {
 	Button editColla;
 	TextView showColla;
 	ImageButton saveBut, deleteBut;
+	CheckBox checkStatus;
 
 	ArrayList<String> priorityOption, groupOption;
 	ArrayList<String> contactList = new ArrayList<String>();
@@ -99,6 +106,7 @@ public class TaskModifyView extends Activity {
 		editNote = (MyEditText) findViewById(R.id.note_right_bottom_panel_add_edit);
 		saveBut = (ImageButton) findViewById(R.id.saveTaskButton_add_edit);
 		deleteBut = (ImageButton) findViewById(R.id.deleteTaskButton_add_edit);
+		checkStatus = (CheckBox) findViewById(R.id.checkStatus_right_bottom_panel_add_edit);
 
 		// Settings for properties
 		/* Priority */
@@ -141,7 +149,32 @@ public class TaskModifyView extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+					
+				//Create new Task and add to Data
+				ArrayList<String> newCollaArray = new ArrayList<String>();
 				
+				String newTitle = editTitle.getText().toString();
+				String newPriority = (String) editPriority.getSelectedItem();
+				int correctMonth = editDate.getMonth()+1;
+				String newDate = editDate.getDayOfMonth() + "/" + correctMonth + "/" + editDate.getYear();
+				String newGroup = (String)editGroup.getSelectedItem();
+				String newColla = showColla.getText().toString();
+				String newNote = editNote.getText().toString();
+				String newStatus;
+				if(checkStatus.isChecked()){
+					newStatus = "Done";
+				}else{
+					newStatus = "Undone";
+				}
+				
+				String[] splitColla = newColla.split(",");
+				for(int i = 0; i < splitColla.length; i++){
+					newCollaArray.add(splitColla[i]);
+				}
+				
+				Database.addToTaskTable(newTitle, newGroup, newPriority, newDate, newStatus, newNote, newCollaArray);
+				
+				//Back to MainScreen
 				finish();
 			}
 		});
