@@ -1,8 +1,0 @@
-package custom;
-
-import android.widget.ArrayAdapter;
-import Model.Task;
-
-public class MyTaskAdapter extends ArrayAdapter<Task> {
-
-}

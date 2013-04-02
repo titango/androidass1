@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="26" version="2.0">
+<workbench progressCount="15" version="2.0">
 <workbenchAdvisor/>
-<window height="788" maximized="true" width="1024" x="486" y="114">
+<window height="788" maximized="true" width="1024" x="-10" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="250"/>
@@ -24,6 +24,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -36,52 +37,99 @@
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="8"/>
 <part id="0"/>
 <part id="1"/>
-<part id="4"/>
+<part id="15"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 <part id="5"/>
 <part id="6"/>
+<part id="14"/>
 <part id="7"/>
+<part id="8"/>
 <part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyTaskAdapter.java" partName="MyTaskAdapter.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/custom/MyTaskAdapter.java" title="MyTaskAdapter.java" tooltip="uTask/src/custom/MyTaskAdapter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/custom/MyTaskAdapter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1473" selectionTopPixel="60"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Database.java" partName="Database.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/database/Database.java" title="Database.java" tooltip="uTask/src/database/Database.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/database/Database.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2294" selectionTopPixel="2103"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Data.java" partName="Data.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/Model/Data.java" title="Data.java" tooltip="uTask/src/Model/Data.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/Model/Data.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="676" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainScreenView.java" partName="MainScreenView.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/activities/MainScreenView.java" title="MainScreenView.java" tooltip="uTask/src/activities/MainScreenView.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/activities/MainScreenView.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="10162" selectionTopPixel="4825"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskModifyView.java" partName="TaskModifyView.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/activities/TaskModifyView.java" title="TaskModifyView.java" tooltip="uTask/src/activities/TaskModifyView.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/activities/TaskModifyView.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2779" selectionTopPixel="855"/>
+</editor>
 <editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="add_edit_task.xml" partName="add_edit_task.xml" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/res/layout/add_edit_task.xml" title="add_edit_task.xml" tooltip="uTask/res/layout/add_edit_task.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/res/layout/add_edit_task.xml"/>
-</editor>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main_screen.xml" partName="activity_main_screen.xml" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/res/layout/activity_main_screen.xml" title="activity_main_screen.xml" tooltip="uTask/res/layout/activity_main_screen.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/res/layout/activity_main_screen.xml"/>
-</editor>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" partName="strings.xml" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/res/values/strings.xml" title="strings.xml" tooltip="uTask/res/values/strings.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/res/values/strings.xml"/>
-</editor>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="colors.xml" partName="colors.xml" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/res/values/colors.xml" title="colors.xml" tooltip="uTask/res/values/colors.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/res/values/colors.xml"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainScreenView.java" partName="MainScreenView.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/activities/MainScreenView.java" title="MainScreenView.java" tooltip="uTask/src/activities/MainScreenView.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/activities/MainScreenView.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="28" selectionOffset="1518" selectionTopPixel="375"/>
 </editor>
 <editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="task_list_item.xml" partName="task_list_item.xml" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/res/layout/task_list_item.xml" title="task_list_item.xml" tooltip="uTask/res/layout/task_list_item.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/res/layout/task_list_item.xml"/>
 </editor>
-<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="uTask Manifest" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/AndroidManifest.xml" title="uTask Manifest" tooltip="uTask/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/AndroidManifest.xml"/>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main_screen.xml" partName="activity_main_screen.xml" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/res/layout/activity_main_screen.xml" title="activity_main_screen.xml" tooltip="uTask/res/layout/activity_main_screen.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/res/layout/activity_main_screen.xml"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Database.java" partName="Database.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/database/Database.java" title="Database.java" tooltip="uTask/src/database/Database.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/database/Database.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5012" selectionTopPixel="952"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskModifyView.java" partName="TaskModifyView.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/activities/TaskModifyView.java" title="TaskModifyView.java" tooltip="uTask/src/activities/TaskModifyView.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/activities/TaskModifyView.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2532" selectionTopPixel="926"/>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="colors.xml" partName="colors.xml" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/res/values/colors.xml" title="colors.xml" tooltip="uTask/res/values/colors.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/res/values/colors.xml"/>
 </editor>
 <editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="myspinner_text_view.xml" partName="myspinner_text_view.xml" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/res/layout/myspinner_text_view.xml" title="myspinner_text_view.xml" tooltip="uTask/res/layout/myspinner_text_view.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/res/layout/myspinner_text_view.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GroupView.java" partName="GroupView.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/activities/GroupView.java" title="GroupView.java" tooltip="uTask/src/activities/GroupView.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/activities/GroupView.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1280" selectionTopPixel="700"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="group_view.xml" partName="group_view.xml" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/res/layout/group_view.xml" title="group_view.xml" tooltip="uTask/res/layout/group_view.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/res/layout/group_view.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="uTask Manifest" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/AndroidManifest.xml" title="uTask Manifest" tooltip="uTask/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/AndroidManifest.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" partName="strings.xml" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/res/values/strings.xml" title="strings.xml" tooltip="uTask/res/values/strings.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/res/values/strings.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="group_list_item.xml" partName="group_list_item.xml" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/res/layout/group_list_item.xml" title="group_list_item.xml" tooltip="uTask/res/layout/group_list_item.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/res/layout/group_list_item.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyGroupTaskAdapter.java" partName="MyGroupTaskAdapter.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/custom/MyGroupTaskAdapter.java" title="MyGroupTaskAdapter.java" tooltip="uTask/src/custom/MyGroupTaskAdapter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/custom/MyGroupTaskAdapter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2208" selectionTopPixel="481"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GroupTask.java" partName="GroupTask.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/Model/GroupTask.java" title="GroupTask.java" tooltip="uTask/src/Model/GroupTask.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/Model/GroupTask.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GroupAddView.java" partName="GroupAddView.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/activities/GroupAddView.java" title="GroupAddView.java" tooltip="uTask/src/activities/GroupAddView.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/activities/GroupAddView.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="683" selectionTopPixel="192"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="group_add_view.xml" partName="group_add_view.xml" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/res/layout/group_add_view.xml" title="group_add_view.xml" tooltip="uTask/res/layout/group_add_view.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/res/layout/group_add_view.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Task.java" partName="Task.java" path="C:/Users/Thinh/Dropbox/Courses/Mobie Application Programming/Ass 1/Android Assignment 1/uTask/src/Model/Task.java" title="Task.java" tooltip="uTask/src/Model/Task.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/uTask/src/Model/Task.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -90,6 +138,9 @@
 </view>
 <view id="com.android.ide.eclipse.ddms.views.DeviceView" partName="Devices"/>
 <view id="com.android.ide.eclipse.ddms.views.ThreadView" partName="Threads"/>
+<view id="org.eclipse.pde.runtime.LogView" partName="Error Log">
+<viewState activate="true" allSessions="true" column2="675" column3="150" column4="150" error="true" groupBy="0" info="true" limit="50" ok="true" orderType="0" orderValue="-1" show_filter_text="true" useLimit="true" warning="true"/>
+</view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
@@ -104,7 +155,8 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (3 items)"/>
+<category IMemento.internal.id="Warnings (29 items)"/>
+<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
@@ -155,7 +207,7 @@
 <view id="com.android.ide.eclipse.ddms.views.AllocTrackerView" partName="Allocation Tracker"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="com.android.ide.eclipse.ddms.views.LogCatView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
 <descriptor class="com.android.ide.eclipse.ddms.Perspective" id="com.android.ide.eclipse.ddms.Perspective" label="DDMS"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -291,6 +343,7 @@
 <view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
 <view id="com.android.ide.eclipse.ddms.views.FileExplorerView"/>
 <view id="org.eclipse.ui.views.ProgressView"/>
+<view id="org.eclipse.pde.runtime.LogView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <layout>
@@ -319,6 +372,7 @@
 <page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
 <page content="com.android.ide.eclipse.ddms.views.FileExplorerView" label="File Explorer"/>
 <page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
+<page content="org.eclipse.pde.runtime.LogView" label="Error Log"/>
 <page content="com.android.ide.eclipse.adt.internal.lint.LintViewPart" label="LabelNotFound"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
@@ -330,10 +384,11 @@
 <part id="4"/>
 <part id="5"/>
 <part id="6"/>
+<part id="7"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.7493333" ratioLeft="562" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">
+<info folder="true" part="right" ratio="0.782263" ratioLeft="1279" ratioRight="356" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
@@ -363,136 +418,161 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/uTask/res/layout/activity_main_screen.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/uTask/res/layout/add_edit_task.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/uTask/src/activities/MainScreenView.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/uTask/src/database/Database.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/uTask/src/activities/TaskModifyView.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/uTask/res/layout/myspinner_text_view.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/uTask/res/values/colors.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/uTask/src/custom/MyTaskAdapter.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/uTask/src/Model/Task.java"/>
 </editors>
-<item historyLabel="add_edit_task.xml" index="1"/>
-<item historyLabel="TaskModifyView.java" index="3">
-<position/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2580" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="7210" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2745" y="0"/>
 </item>
-<item historyLabel="add_edit_task.xml" index="1"/>
-<item historyLabel="TaskModifyView.java" index="3">
-<position/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="7210" y="0"/>
 </item>
-<item historyLabel="add_edit_task.xml" index="1"/>
-<item historyLabel="TaskModifyView.java" index="3">
-<position/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2717" y="0"/>
 </item>
-<item historyLabel="add_edit_task.xml" index="1"/>
-<item historyLabel="TaskModifyView.java" index="3">
-<position/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="5591" y="0"/>
 </item>
-<item historyLabel="add_edit_task.xml" index="1"/>
-<item historyLabel="TaskModifyView.java" index="3">
-<position/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2717" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="5591" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1194" y="0"/>
+<item historyLabel="MyTaskAdapter.java" index="3">
+<position info="not_deleted" x="1473" y="0"/>
 </item>
-<item historyLabel="MainScreenView.java" index="2">
-<position info="not_deleted" x="2388" y="0"/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="1650" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="981" y="0"/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="6682" y="0"/>
 </item>
-<item historyLabel="MainScreenView.java" index="2">
-<position info="not_deleted" x="2388" y="0"/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="1650" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="6682" y="0"/>
 </item>
-<item historyLabel="MainScreenView.java" index="2">
-<position info="not_deleted" x="1518" y="28"/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="4057" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="4779" y="0"/>
 </item>
-<item historyLabel="MainScreenView.java" index="2">
-<position info="not_deleted" x="1518" y="28"/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="1650" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1194" y="0"/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2715" y="0"/>
 </item>
-<item historyLabel="add_edit_task.xml" index="1"/>
-<item historyLabel="MainScreenView.java" index="2">
-<position info="not_deleted" x="1518" y="28"/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="1650" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1194" y="0"/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2715" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1194" y="0"/>
+<item historyLabel="Database.java" index="1">
+<position info="not_deleted" x="2294" y="0"/>
 </item>
-<item historyLabel="MainScreenView.java" index="2">
-<position info="not_deleted" x="1518" y="28"/>
+<item historyLabel="MyTaskAdapter.java" index="3">
+<position info="not_deleted" x="1473" y="0"/>
 </item>
-<item historyLabel="activity_main_screen.xml" index="0"/>
-<item historyLabel="myspinner_text_view.xml" index="4"/>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1194" y="0"/>
+<item historyLabel="Database.java" index="1">
+<position info="not_deleted" x="2294" y="0"/>
 </item>
-<item historyLabel="colors.xml" index="5"/>
-<item historyLabel="myspinner_text_view.xml" index="4"/>
-<item historyLabel="activity_main_screen.xml" index="0"/>
-<item historyLabel="add_edit_task.xml" index="1"/>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1194" y="0"/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="1650" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="4023" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1194" y="0"/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="1650" y="0"/>
 </item>
-<item historyLabel="add_edit_task.xml" index="1"/>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1194" y="0"/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2777" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="2654" y="0"/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="7613" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1456" y="0"/>
+<item historyLabel="Task.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1379" y="8"/>
+<item historyLabel="MyTaskAdapter.java" index="3">
+<position info="not_deleted" x="1473" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1456" y="0"/>
+<item historyLabel="Database.java" index="1">
+<position info="not_deleted" x="2294" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1379" y="8"/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="7613" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1456" y="0"/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="6654" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2777" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="924" y="0"/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="6654" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="2461" y="0"/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2777" y="0"/>
 </item>
-<item historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="2587" y="0"/>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="6772" y="0"/>
 </item>
-<item active="true" historyLabel="TaskModifyView.java" index="3">
-<position info="not_deleted" x="1456" y="0"/>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2777" y="0"/>
+</item>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="6772" y="0"/>
+</item>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2777" y="0"/>
+</item>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="6772" y="0"/>
+</item>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2469" y="0"/>
+</item>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="7041" y="0"/>
+</item>
+<item historyLabel="TaskModifyView.java" index="2">
+<position info="not_deleted" x="2779" y="0"/>
+</item>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="8322" y="0"/>
+</item>
+<item historyLabel="Database.java" index="1">
+<position info="not_deleted" x="2294" y="0"/>
+</item>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="8322" y="0"/>
+</item>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="9250" y="0"/>
+</item>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="9278" y="0"/>
+</item>
+<item historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="10169" y="0"/>
+</item>
+<item active="true" historyLabel="MainScreenView.java" index="0">
+<position info="not_deleted" x="10162" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -512,50 +592,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="myspinner_text_view.xml" tooltip="uTask/res/layout/myspinner_text_view.xml">
-<persistable path="/uTask/res/layout/myspinner_text_view.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskModifyView.java" tooltip="uTask/src/activities/TaskModifyView.java">
-<persistable path="/uTask/src/activities/TaskModifyView.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Database.java" tooltip="uTask/src/database/Database.java">
-<persistable path="/uTask/src/database/Database.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="uTask/AndroidManifest.xml">
-<persistable path="/uTask/AndroidManifest.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="task_list_item.xml" tooltip="uTask/res/layout/task_list_item.xml">
-<persistable path="/uTask/res/layout/task_list_item.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainScreenView.java" tooltip="uTask/src/activities/MainScreenView.java">
-<persistable path="/uTask/src/activities/MainScreenView.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Task.java" tooltip="uTask/src/Model/Task.java">
+<persistable path="/uTask/src/Model/Task.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskView.java" tooltip="uTask/src/activities/TaskView.java">
 <persistable path="/uTask/src/activities/TaskView.java"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="dimens.xml" tooltip="uTask/res/values/dimens.xml">
+<persistable path="/uTask/res/values/dimens.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="group_add_view.xml" tooltip="uTask/res/layout/group_add_view.xml">
+<persistable path="/uTask/res/layout/group_add_view.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GroupAddView.java" tooltip="uTask/src/activities/GroupAddView.java">
+<persistable path="/uTask/src/activities/GroupAddView.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GroupTask.java" tooltip="uTask/src/Model/GroupTask.java">
+<persistable path="/uTask/src/Model/GroupTask.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyEditText.java" tooltip="uTask/src/custom/MyEditText.java">
 <persistable path="/uTask/src/custom/MyEditText.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="colors.xml" tooltip="uTask/res/values/colors.xml">
-<persistable path="/uTask/res/values/colors.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyImageButton.java" tooltip="uTask/src/custom/MyImageButton.java">
+<persistable path="/uTask/src/custom/MyImageButton.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyGroupTaskAdapter.java" tooltip="uTask/src/custom/MyGroupTaskAdapter.java">
+<persistable path="/uTask/src/custom/MyGroupTaskAdapter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="group_list_item.xml" tooltip="uTask/res/layout/group_list_item.xml">
+<persistable path="/uTask/res/layout/group_list_item.xml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" tooltip="uTask/res/values/strings.xml">
 <persistable path="/uTask/res/values/strings.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main_screen.xml" tooltip="uTask/res/layout/activity_main_screen.xml">
-<persistable path="/uTask/res/layout/activity_main_screen.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="uTask/AndroidManifest.xml">
+<persistable path="/uTask/AndroidManifest.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="add_edit_task.xml" tooltip="uTask/res/layout/add_edit_task.xml">
-<persistable path="/uTask/res/layout/add_edit_task.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="group_view.xml" tooltip="uTask/res/layout/group_view.xml">
+<persistable path="/uTask/res/layout/group_view.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Snippet.java" tooltip="uTask/src/Handler/Snippet.java">
-<persistable path="/uTask/src/Handler/Snippet.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GroupView.java" tooltip="uTask/src/activities/GroupView.java">
+<persistable path="/uTask/src/activities/GroupView.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainButtonHandler.java" tooltip="uTask/src/Handler/MainButtonHandler.java">
-<persistable path="/uTask/src/Handler/MainButtonHandler.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="styles.xml" tooltip="uTask/res/values/styles.xml">
-<persistable path="/uTask/res/values/styles.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="ic_launcher.png" tooltip="uTask/res/drawable-mdpi/ic_launcher.png">
+<persistable path="/uTask/res/drawable-mdpi/ic_launcher.png"/>
 </file>
 </mruList>
 </workbench>

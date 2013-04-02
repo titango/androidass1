@@ -1,0 +1,360 @@
+package activities;
+
+import java.util.ArrayList;
+
+import Assignment.utask.R;
+import Model.Data;
+import Model.Task;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.webkit.DateSorter;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ListView;
+import android.widget.Spinner;
+import custom.MyTaskAdapter;
+import database.Database;
+
+public class MainScreenView extends Activity {
+
+	/*---Properties---*/
+	Database database = new Database(this);
+	public static MainScreenView unique;
+	public static final int ADD_INTENT = 1;
+	public static final int EDIT_INTENT = 2;
+	public static final int GROUP_VIEW = 5;
+
+	// All input tools
+	Spinner groupSpin, sortSpin;
+	ListView taskListView;
+	ImageButton taskBut, groupBut;
+
+	ArrayAdapter<String> spinGroupAdapt, sortAdapt;
+	MyTaskAdapter taskAdapt;
+	ArrayList<String> groupName = new ArrayList<String>();
+	ArrayList<String> sortData = new ArrayList<String>();
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main_screen);
+		unique = this;
+
+		// Create or Open database and load into Model
+		Data.refreshData();
+		Database.createDatabase();
+		Database.loadToData();
+
+		// // Check if there are 4 pre-defined
+		if (Data.getGroupList().size() == 0) {
+			Database.addToGroupTaskTable("RMIT");
+			Database.addToGroupTaskTable("Office");
+			Database.addToGroupTaskTable("Homework");
+			Database.addToGroupTaskTable("Freelancer");
+			Data.refreshData();
+			Database.loadToData();
+		}
+
+		// Settings for Properties
+		settingsForProperties();
+
+		// Add controller
+		allAction();
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main_screen, menu);
+		return true;
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		Log.i("Return back to main", "Already returned");
+
+		switch (requestCode) {
+		case (ADD_INTENT):
+//			if (resultCode == Activity.RESULT_OK) {
+//	            Bundle extras = data.getExtras();
+//	            if (extras != null) {
+//	            	for (int i = 0; i < Data.getGroupList().size(); i++) {
+//	    				if (Data.getGroupList().get(i)
+//	    						.equals(extras.get("selectedGroup"))) {
+//	    					this.groupSpin.setSelection(i);
+//	    					break;
+//	    				}
+//	    			}
+//	            }
+//	        }
+			
+			taskAdapt.notifyDataSetChanged();
+			break;
+
+		case (EDIT_INTENT):
+//			for (int i = 0; i < Data.getGroupList().size(); i++) {
+//				if (Data.getGroupList().get(i)
+//						.equals(data.getExtras().get("selectedGroup"))) {
+//					this.groupSpin.setSelection(i);
+//					break;
+//				}
+//			}
+		
+			taskAdapt.notifyDataSetChanged();
+			break;
+
+		case (GROUP_VIEW):
+			Log.i("Before refresh", this.groupName.size() + "");
+			refreshGroupName();
+			spinGroupAdapt.notifyDataSetChanged();
+			Log.i("After refresh", this.groupName.size() + "");
+			break;
+
+		default:
+
+		}
+
+	}
+
+	// This will refresh the item once the group is added
+	public void refreshGroupName() {
+		this.groupName.clear();
+		for (int i = 0; i < Data.getGroupList().size(); i++) {
+			groupName.add(Data.getGroupList().get(i).getGroupName());
+		}
+	}
+
+	private void settingsForProperties() {
+		// Create 2 spinners
+		groupSpin = (Spinner) findViewById(R.id.groupSpin);
+		sortSpin = (Spinner) findViewById(R.id.sortSpin);
+
+		// Create 2 ImageButton
+		taskBut = (ImageButton) findViewById(R.id.addTaskButton);
+		groupBut = (ImageButton) findViewById(R.id.addGroupTaskButton);
+
+		// Create listview
+		taskListView = (ListView) findViewById(R.id.showAllTask);
+
+		// Add the total group to the groupName arraylist and setAdapter
+		refreshGroupName();
+		spinGroupAdapt = new ArrayAdapter<String>(this,
+				R.layout.myspinner_text_view, this.groupName);
+		spinGroupAdapt
+				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinGroupAdapt.setNotifyOnChange(true);
+		groupSpin.setAdapter(spinGroupAdapt);
+
+		// Add the options of sorting to sortData and set Adapter
+		sortData.add("Date");
+		sortData.add("Priority");
+		sortData.add("Order");
+		sortAdapt = new ArrayAdapter<String>(this,
+				R.layout.myspinner_text_view, sortData);
+		sortAdapt
+				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		sortSpin.setAdapter(sortAdapt);
+
+		// Use custom adapter and set ListView
+		taskAdapt = new MyTaskAdapter(getApplicationContext(),
+				R.layout.task_list_item, Data.getTaskList());
+		taskAdapt.setNotifyOnChange(true);
+		taskListView.setAdapter(taskAdapt);
+	}
+
+	private void allAction() {
+
+		// Go to TaskModifyView when click Add Task
+		taskBut.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Data.refreshData();
+				Database.loadToData();
+				Intent shootToAddEditTaskIntent = new Intent(
+						MainScreenView.this, TaskModifyView.class);
+				Bundle myBundle = new Bundle();
+				myBundle.putString("type", "add");
+				shootToAddEditTaskIntent.putExtras(myBundle);
+				startActivityForResult(shootToAddEditTaskIntent, ADD_INTENT);
+			}
+		});
+
+		groupBut.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent shootToGroupViewIntent = new Intent(MainScreenView.this,
+						GroupView.class);
+				startActivityForResult(shootToGroupViewIntent, GROUP_VIEW);
+			}
+		});
+
+		taskListView.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				
+				Task itemTask = (Task) taskListView.getItemAtPosition(position);
+				String itemId = itemTask.getId();
+				String itemTitle = itemTask.getTitle();
+				String itemPriority = itemTask.getPriority();
+				String itemDate = itemTask.getDueDate();
+				String itemGroup = itemTask.getGroupName();
+				String itemStatus = itemTask.getStatus();
+				String itemNote = itemTask.getNote();
+				String itemColla = new String();
+				
+
+				Log.i("itemColla Size", itemTask.getCollaborators().size() + "");
+
+				for (int i = 0; i < itemTask.getCollaborators().size(); i++) {
+					if (i == 0) {
+						itemColla = itemColla
+								+ itemTask.getCollaborators().get(i);
+					} else {
+						itemColla = itemColla + ","
+								+ itemTask.getCollaborators().get(i);
+					}
+					Log.i("Each item", itemColla);
+
+				}
+				
+				
+				
+				Log.i("ID", itemTask.getId());
+				Log.i("itemStatus", itemStatus);
+				Log.i("Grouping", itemGroup);
+				Log.i("Collap", itemColla);
+				
+				Bundle myBundle = new Bundle();
+
+				myBundle.putString("id", itemId);
+				myBundle.putString("title", itemTitle);
+				myBundle.putString("priority", itemPriority);
+				myBundle.putString("date", itemDate);
+				myBundle.putString("group", itemGroup);
+				myBundle.putString("status", itemStatus);
+				myBundle.putString("note", itemNote);
+				myBundle.putString("colla", itemColla);
+				myBundle.putString("type", "edit");
+				Intent myIntent = new Intent(MainScreenView.this,
+						TaskModifyView.class);
+				myIntent.putExtras(myBundle);
+
+				startActivityForResult(myIntent, EDIT_INTENT);
+			}
+		});
+
+		groupSpin.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> arg0, View arg1,
+					int arg2, long arg3) {
+				// TODO Auto-generated method stub
+				String item = (String) groupSpin.getItemAtPosition(arg2);
+				ArrayList<Task> numDel = new ArrayList<Task>();
+//				Log.i("Test", "Haha");
+				Data.refreshData();
+//				Log.i("Before clear", Data.getTaskList().size() + "");
+				Database.loadToData();
+//				Log.i("After clear", Data.getTaskList().size() + "");
+
+				for (int i = 0; i < Data.getTaskList().size(); i++) {
+					if (!Data.getTaskList().get(i).getGroupName().equals(item)) {
+						numDel.add(Data.getTaskList().get(i));
+					}
+				}
+
+				// Log.i("Number after click spin", numberOfDeleted.get(i) +
+				// "");
+
+				for (int i = 0; i < numDel.size(); i++) {
+					Task temp = numDel.get(i);
+					Data.getTaskList().remove(temp);
+				}
+
+				taskAdapt.notifyDataSetChanged();
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+
+		sortSpin.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> arg0, View arg1,
+					int arg2, long arg3) {
+
+				String item = (String) sortSpin.getItemAtPosition(arg2);
+				Log.i("Inside SortSpin", "atStart sort spin");
+				Log.i("Item", item);
+				
+				if (item.equals("Priority")) {
+					ArrayList<Task> tempTask = new ArrayList<Task>();
+					for (int i = 0; i < Data.getTaskList().size(); i++) {
+						tempTask.add(Data.getTaskList().get(i));
+					}
+
+					Data.getTaskList().clear();
+					for (int i = 0; i < tempTask.size(); i++) {
+						if (tempTask.get(i).getPriority().equals("High")) {
+							Data.getTaskList().add(tempTask.get(i));
+						}
+					}
+					for (int i = 0; i < tempTask.size(); i++) {
+						if (tempTask.get(i).getPriority().equals("Medium")) {
+							Data.getTaskList().add(tempTask.get(i));
+						}
+					}
+					for (int i = 0; i < tempTask.size(); i++) {
+						if (tempTask.get(i).getPriority().equals("Low")) {
+							Data.getTaskList().add(tempTask.get(i));
+						}
+					}
+
+					taskAdapt.notifyDataSetChanged();
+				}
+
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+
+	}
+
+	public static MainScreenView getUnique() {
+		return unique;
+	}
+
+	public ArrayList<String> getGroupName() {
+		return groupName;
+	}
+
+	public void setGroupName(ArrayList<String> groupName) {
+		this.groupName = groupName;
+	}
+
+	public ArrayAdapter<String> getSpinGroupAdapt() {
+		return spinGroupAdapt;
+	}
+
+}

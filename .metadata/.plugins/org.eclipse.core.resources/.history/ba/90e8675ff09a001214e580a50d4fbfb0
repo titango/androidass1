@@ -1,0 +1,7 @@
+package custom;
+
+import android.widget.ImageButton;
+
+public class MyImageButton extends ImageButton{
+
+}

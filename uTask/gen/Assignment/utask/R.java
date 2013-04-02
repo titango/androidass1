@@ -39,63 +39,84 @@ public final class R {
         public static final int top_panel_gradient_selector=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090020;
+        public static final int action_settings=0x7f09002d;
         public static final int addGroupTaskButton=0x7f090004;
+        public static final int addGroupTaskButton_group_view=0x7f090026;
         public static final int addTaskButton=0x7f090003;
         public static final int bottom_panel=0x7f090005;
         public static final int bottom_panel_add_edit=0x7f09000a;
+        public static final int bottom_panel_group_add=0x7f09001e;
+        public static final int bottom_panel_group_view=0x7f090027;
         public static final int checkStatus_right_bottom_panel_add_edit=0x7f090015;
         public static final int chooseContact_right_bottom_panel_add_edit=0x7f09001a;
         public static final int colla_left_bottom_panel_add_edit=0x7f090010;
         public static final int contactbutton_right_bottom_panel_add_edit=0x7f090019;
         public static final int date_right_bottom_panel_add_edit=0x7f090017;
-        public static final int deleteTaskButton_add_edit=0x7f090009;
+        public static final int deleteTaskButton_add_edit=0x7f090008;
         public static final int duedate_left_bottom_panel_add_edit=0x7f09000e;
+        public static final int groupName_left_bottom_panel_group_add=0x7f090020;
         public static final int groupSpin=0x7f090001;
         public static final int group_left_bottom_panel_add_edit=0x7f09000f;
+        public static final int group_list_item_delete=0x7f090024;
+        public static final int group_list_item_groupName=0x7f090023;
         public static final int group_right_bottom_panel_add_edit=0x7f090018;
         public static final int insideTitle_bottom_panel_add_edit=0x7f090013;
         public static final int left_bottom_panel_add_edit=0x7f09000b;
+        public static final int left_bottom_panel_group_add=0x7f09001f;
+        public static final int newGroup_right_bottom_panel_group_add=0x7f090022;
         public static final int note_left_bottom_panel_add_edit=0x7f090011;
         public static final int note_right_bottom_panel_add_edit=0x7f09001b;
         public static final int priority_left_bottom_panel_add_edit=0x7f09000d;
         public static final int priority_right_bottom_panel_add_edit=0x7f090016;
         public static final int right_bottom_panel_add_edit=0x7f090012;
-        public static final int saveTaskButton_add_edit=0x7f090008;
+        public static final int right_bottom_panel_group_add=0x7f090021;
+        public static final int saveTaskButton_add_edit=0x7f090009;
+        public static final int saveTaskButton_group_add=0x7f09001d;
         public static final int showAllTask=0x7f090006;
+        public static final int showAllTask_group_view=0x7f090028;
         public static final int sortSpin=0x7f090002;
-        public static final int task_list_item_date=0x7f09001c;
-        public static final int task_list_item_priority=0x7f09001e;
-        public static final int task_list_item_status=0x7f09001f;
-        public static final int task_list_item_title=0x7f09001d;
+        public static final int task_list_item_date=0x7f090029;
+        public static final int task_list_item_priority=0x7f09002b;
+        public static final int task_list_item_status=0x7f09002c;
+        public static final int task_list_item_title=0x7f09002a;
         public static final int title_left_bottom_panel_add_edit=0x7f09000c;
         public static final int title_right_bottom_panel_add_edit=0x7f090014;
         public static final int top_panel=0x7f090000;
         public static final int top_panel_add_edit=0x7f090007;
+        public static final int top_panel_group_add=0x7f09001c;
+        public static final int top_panel_group_view=0x7f090025;
     }
     public static final class layout {
         public static final int activity_main_screen=0x7f030000;
         public static final int add_edit_task=0x7f030001;
-        public static final int myspinner_text_view=0x7f030002;
-        public static final int task_list_item=0x7f030003;
+        public static final int group_add_view=0x7f030002;
+        public static final int group_list_item=0x7f030003;
+        public static final int group_view=0x7f030004;
+        public static final int myspinner_text_view=0x7f030005;
+        public static final int task_list_item=0x7f030006;
     }
     public static final class menu {
         public static final int main_screen=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060001;
-        public static final int addingGroupTaskButton=0x7f060004;
-        public static final int addingTaskButton=0x7f060003;
+        public static final int action_settings=0x7f060005;
+        public static final int addingGroupTaskButton=0x7f060008;
+        public static final int addingTaskButton=0x7f060007;
         public static final int app_name=0x7f060000;
-        public static final int chooseContact=0x7f06000b;
-        public static final int collaborator=0x7f060009;
-        public static final int duedate=0x7f060007;
-        public static final int group=0x7f060008;
-        public static final int hello_world=0x7f060002;
-        public static final int note=0x7f06000a;
-        public static final int priority=0x7f060005;
-        public static final int status=0x7f06000c;
-        public static final int title=0x7f060006;
+        public static final int chooseContact=0x7f06000f;
+        public static final int collaborator=0x7f06000d;
+        public static final int duedate=0x7f06000b;
+        public static final int group=0x7f06000c;
+        public static final int group_add_view=0x7f060004;
+        public static final int group_view=0x7f060002;
+        public static final int hello_world=0x7f060006;
+        public static final int newgroup=0x7f060011;
+        public static final int note=0x7f06000e;
+        public static final int priority=0x7f060009;
+        public static final int status=0x7f060010;
+        public static final int task_view=0x7f060001;
+        public static final int taskmodify=0x7f060003;
+        public static final int title=0x7f06000a;
     }
     public static final class style {
         /** 

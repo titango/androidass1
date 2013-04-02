@@ -1,0 +1,16 @@
+package activities;
+
+import Assignment.utask.*;
+import android.app.Activity;
+import android.os.Bundle;
+
+public class GroupAddView extends Activity{
+
+	private ImageButton addNewGroup;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.group_add_view);
+	}
+}

@@ -9,6 +9,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 public class Database {
 
@@ -53,8 +54,9 @@ public class Database {
 	}
 
 	// Add values to Table "taskTable"
-	public static void addToTaskTable(String title, String groupName, String priority,
-			String dueDate, String status, String note, ArrayList<String> colla) {
+	public static void addToTaskTable(String title, String groupName,
+			String priority, String dueDate, String status, String note,
+			ArrayList<String> colla) {
 
 		// Add to SQLiteDatabase
 		String tempColla = "";
@@ -110,14 +112,63 @@ public class Database {
 		Data.getGroupList().add(newGroup);
 	}
 
+	// Update values to table taskTable
+	public static void updateToTaskTable(String Id, String title, String groupName,
+			String priority, String dueDate, String status, String note,
+			ArrayList<String> colla) {
+		
+		String tempColla = "";
+
+		ContentValues newValues = new ContentValues();
+		newValues.put(TITLE, title);
+		newValues.put(GROUP_NAME, groupName);
+		newValues.put(PRIORITY, priority);
+		newValues.put(DUEDATE, dueDate);
+		newValues.put(STATUS, status);
+		newValues.put(NOTE, note);
+
+		for (int i = 0; i < colla.size(); i++) {
+			if (i == 0) {
+				tempColla = tempColla + colla.get(i);
+			} else {
+				tempColla = tempColla + "," + colla.get(i);
+			}
+		}
+
+		newValues.put(COLLABORATORS, tempColla);
+		myDb.update(TASK_TABLE, newValues,TASK_ID + " = '" + Id + "'",null);
+
+		// Add to Data class (model)
+		for(int i = 0; i < Data.getTaskList().size(); i++){
+			if(Data.getTaskList().get(i).getId().equals(Id)){
+				Data.getTaskList().get(i);
+				Log.i("Inside id", Data.getTaskList().get(i).getId());
+				Data.getTaskList().get(i).setGroupName(groupName);
+				Data.getTaskList().get(i).setTitle(title);
+				Data.getTaskList().get(i).setPriority(priority);
+				Data.getTaskList().get(i).setDueDate(dueDate);
+				Data.getTaskList().get(i).setStatus(status);
+				Data.getTaskList().get(i).setNote(note);
+				Data.getTaskList().get(i).setCollaborators(colla);
+				break;
+			}
+		}
+		
+		
+	}
+
 	// Delete values from taskTable
-	public static void deleteFromTaskTable(int id) {
-		myDb.delete(TASK_TABLE, TASK_ID + " = " + id, null);
+	public static void deleteFromTaskTable(String id) {
+		// myDb.delete(TASK_TABLE, TASK_ID + " = " + id, null);
+		myDb.execSQL("Delete from " + TASK_TABLE + " where " + TASK_ID + " = '"
+				+ id + "'");
 	}
 
 	// Delete values from groupTaskTable
-	public static void deleteFromGroupTaskTable(int id) {
-		myDb.delete(TASK_GROUP_TABLE, GROUP_ID + " = " + id, null);
+	public static void deleteFromGroupTaskTable(String id) {
+		// myDb.delete(TASK_GROUP_TABLE, GROUP_ID + " = " + id , null);
+		myDb.execSQL("Delete from " + TASK_GROUP_TABLE + " where " + GROUP_ID
+				+ " = '" + id + "'");
 	}
 
 	// Load data into Data model class

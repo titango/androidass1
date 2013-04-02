@@ -1,0 +1,35 @@
+package custom;
+
+import java.util.ArrayList;
+
+import Model.GroupTask;
+import Model.Task;
+import android.content.Context;
+import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+public class MyGroupTaskAdapter extends ArrayAdapter<GroupTask>{
+
+	private Context context;
+	private ArrayList<GroupTask> taskGroup = new ArrayList<GroupTask>();
+	TextView viewGroupName;
+	ImageButton deleteGroupName;
+
+	public MyGroupTaskAdapter(Context context, int textViewResourceId,
+			ArrayList<GroupTask> objects) {
+		super(context, textViewResourceId, objects);
+		this.context = context;
+		this.taskGroup = objects;
+	}
+	
+	public int getCount() {
+		return this.taskGroup.size();
+	}
+
+	public GroupTask getItem(int index) {
+		return this.taskGroup.get(index);
+	}
+	
+	
+}

@@ -1,0 +1,40 @@
+package activities;
+
+import Assignment.utask.R;
+import Model.Data;
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ListView;
+import custom.MyGroupTaskAdapter;
+import custom.MyTaskAdapter;
+
+public class GroupView extends Activity{
+
+	ListView groupListView;
+	ImageButton addGroup;
+	
+	MyGroupTaskAdapter groupAdapt;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.group_view);
+		
+		//Settings for properties
+		SettingsForProperties();
+	}
+	
+	private void SettingsForProperties(){
+		groupListView = (ListView) findViewById(R.id.showAllTask_group_view);
+		
+		Log.i("Error detected", "Error here");
+		groupAdapt = new MyGroupTaskAdapter(getApplicationContext(), R.layout.group_list_item, Data.getGroupList());
+		groupAdapt.setNotifyOnChange(true);
+		groupListView.setAdapter(groupAdapt);
+		
+	}
+}

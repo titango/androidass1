@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp" 
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/group_list_item_groupName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/lightblue"
+        android:gravity="center"
+        android:layout_weight="10"
+        android:textColor="@color/darkblue"
+        android:textIsSelectable="true" >
+    </TextView>
+
+    <custom.MyImageButton
+        android:id="@+id/group_list_item_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/addingGroupTaskButton"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:src="@android:drawable/ic_delete" >
+    </custom.MyImageButton>
+
+</LinearLayout>

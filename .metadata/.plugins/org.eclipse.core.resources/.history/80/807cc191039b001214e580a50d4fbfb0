@@ -1,0 +1,22 @@
+package activities;
+
+import Assignment.utask.R;
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ImageButton;
+import custom.MyEditText;
+import android.widget.TextView;
+
+public class GroupAddView extends Activity{
+
+	private ImageButton addNewGroup;
+	private Textview newGroupText;
+	private MyEditText newEditGroup;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.group_add_view);
+	}
+}

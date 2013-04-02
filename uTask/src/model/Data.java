@@ -23,6 +23,11 @@ public class Data {
 	public static void setTaskList(ArrayList<Task> taskList) {
 		Data.taskList = taskList;
 	}
+	
+	public static void refreshData(){
+		Data.groupList.clear();
+		Data.taskList.clear();
+	}
 
 	
 }

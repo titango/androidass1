@@ -1,0 +1,14 @@
+package custom;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.ImageButton;
+
+public class MyImageButton extends ImageButton{
+
+	public MyImageButton(Context context, AttributeSet attrs, int defStyle) {
+		super(context, attrs, defStyle);
+		// TODO Auto-generated constructor stub
+	}
+
+}

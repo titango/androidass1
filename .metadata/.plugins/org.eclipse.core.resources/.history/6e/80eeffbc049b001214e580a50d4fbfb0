@@ -1,0 +1,86 @@
+package activities;
+
+import Assignment.utask.R;
+import Model.Data;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ListView;
+import custom.MyGroupTaskAdapter;
+import custom.MyTaskAdapter;
+
+public class GroupView extends Activity {
+
+	private static final int ADD_GROUP = 10;
+	
+	ListView groupListView;
+	ImageButton addGroup;
+
+	MyGroupTaskAdapter groupAdapt;
+
+	public static GroupView unique;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.group_view);
+		unique = this;
+
+		// Settings for properties
+		SettingsForProperties();
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		
+		switch(requestCode){
+			if(resultCode == Activity.RESULT_OK){
+				
+			}
+		}
+	}
+
+	private void SettingsForProperties() {
+		groupListView = (ListView) findViewById(R.id.showAllTask_group_view);
+
+		groupAdapt = new MyGroupTaskAdapter(getApplicationContext(),
+				R.layout.group_list_item, Data.getGroupList());
+		groupAdapt.setNotifyOnChange(true);
+		groupListView.setAdapter(groupAdapt);
+		
+		addGroup = (ImageButton) findViewById(R.id.addGroupTaskButton_group_view);
+		addGroup.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent myIntent = new Intent(GroupView.this, GroupAddView.class);
+				startActivityForResult(myIntent, ADD_GROUP);
+			}
+		});
+	}
+
+	public MyGroupTaskAdapter getGroupAdapt() {
+		return groupAdapt;
+	}
+
+	public void setGroupAdapt(MyGroupTaskAdapter groupAdapt) {
+		this.groupAdapt = groupAdapt;
+	}
+
+	public static GroupView getUnique() {
+		return unique;
+	}
+
+	public static void setUnique(GroupView unique) {
+		GroupView.unique = unique;
+	}
+
+}

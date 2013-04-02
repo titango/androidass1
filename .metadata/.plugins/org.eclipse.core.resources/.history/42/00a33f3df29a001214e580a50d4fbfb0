@@ -1,0 +1,28 @@
+package activities;
+
+import Assignment.utask.*;
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ListView;
+
+public class GroupView extends Activity{
+
+	ListView groupList;
+	ImageButton addGroup, deleteGroup;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.group_view);
+		
+		//Settings for properties
+		SettingsForProperties();
+	}
+	
+	private void SettingsForProperties(){
+		
+	}
+}

@@ -1,0 +1,29 @@
+package custom;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.ImageButton;
+
+public class MyImageButton extends ImageButton {
+	private String name;
+
+	public MyImageButton(Context context, AttributeSet attrs, int defStyle, String name) {
+		super(context, attrs, defStyle);
+		// TODO Auto-generated constructor stub
+		this.name = name;
+	}
+
+	// public MyImageButton(Context context, String name){
+	// super(context);
+	// this.name = name;
+	// }
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

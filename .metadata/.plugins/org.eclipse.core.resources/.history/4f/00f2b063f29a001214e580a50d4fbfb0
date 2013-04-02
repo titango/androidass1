@@ -1,0 +1,38 @@
+package activities;
+
+import Assignment.utask.R;
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ListView;
+import custom.MyGroupTaskAdapter;
+
+public class GroupView extends Activity{
+
+	ListView groupList;
+	ImageButton addGroup;
+	
+	MyGroupTaskAdapter groupAdapt;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.group_view);
+		
+		//Settings for properties
+		SettingsForProperties();
+	}
+	
+	private void SettingsForProperties(){
+		groupList = (ListView) findViewById(R.id.showAllTask_group_view);
+		
+		groupName = refreshGroupName();
+		spinGroupAdapt = new ArrayAdapter<String>(this,
+				R.layout.myspinner_text_view, groupName);
+		spinGroupAdapt.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinGroupAdapt.setNotifyOnChange(true);
+		groupSpin.setAdapter(spinGroupAdapt);
+	}
+}

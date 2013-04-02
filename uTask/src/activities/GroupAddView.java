@@ -1,0 +1,45 @@
+package activities;
+
+import Assignment.utask.R;
+import Model.GroupTask;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import custom.MyEditText;
+import database.Database;
+import android.widget.TextView;
+
+public class GroupAddView extends Activity{
+
+	private ImageButton addNewGroup;
+	private TextView newGroupText;
+	private MyEditText newEditGroup;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.group_add_view);
+		
+		Bundle received = this.getIntent().getExtras();
+		
+		addNewGroup = (ImageButton) findViewById(R.id.saveTaskButton_group_add);
+		newGroupText = (TextView) findViewById(R.id.groupName_left_bottom_panel_group_add);
+		newEditGroup = (MyEditText) findViewById(R.id.newGroup_right_bottom_panel_group_add);
+		
+		addNewGroup.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				String newGroup = newEditGroup.getText().toString();
+				
+				Database.addToGroupTaskTable(newGroup);
+				
+				//Return to Group View
+				finish();
+			}
+		});
+	}
+}
